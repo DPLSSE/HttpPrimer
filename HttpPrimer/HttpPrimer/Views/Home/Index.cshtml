@@ -6,14 +6,20 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-
+    <div>
     <form method="post" asp-action="DoPost" asp-controller="Home">
+        <input id="MyPostFormId" type="hidden" asp-for="FormId" value="My Post Form"/>
         <input id="MyPostInput" type="text" asp-for="FormInput"/>
         <input id="Submit1" type="submit" value="Submit Via Post" />
-    </form>
-
+    </form>        
+    </div>
+    <hr>
+    <div>
     <form method="get" asp-action="DoGet" asp-controller="Home">
+        <input id="MyGetFormId" type="hidden" asp-for="FormId" value="My Get Form"/>
         <input id="MyGetInput" type="text" asp-for="FormInput" />
-        <input id="Submit1" type="submit" value="Submit Via Get" />
-    </form>
+        <input id="Submit2" type="submit" value="Submit Via Get" />
+    </form>        
+    </div>
+
 </div>

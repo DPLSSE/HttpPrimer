@@ -7,6 +7,7 @@ namespace HttpPrimer.Models
 {
     public class FormDataModel
     {
+        public string FormId;
         public string FormInput;
     }
 }

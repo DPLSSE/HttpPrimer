@@ -27,13 +27,15 @@ namespace HttpPrimer.Controllers
         [HttpGet]
         public string DoGet()
         {
-            return Request.Query["FormInput"];
+            string result = "Form id: " + Request.Query["FormId"] + " Form Input: " + Request.Query["FormInput"];
+            return result;
         }
 
         [HttpPost]
         public string DoPost()
         {
-            return Request.Form["FormInput"];
+            string result = "Form id: " + Request.Form["FormId"] + " Form Input: " + Request.Form["FormInput"];
+            return result;
         }
 
         public IActionResult Privacy()
